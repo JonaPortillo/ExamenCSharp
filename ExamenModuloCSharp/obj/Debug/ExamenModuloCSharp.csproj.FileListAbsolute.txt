@@ -1,0 +1,11 @@
+C:\Users\JonathanPortillo\source\repos\ExamenModuloCSharp\ExamenModuloCSharp\bin\Debug\ExamenModuloCSharp.exe.config
+C:\Users\JonathanPortillo\source\repos\ExamenModuloCSharp\ExamenModuloCSharp\bin\Debug\ExamenModuloCSharp.exe
+C:\Users\JonathanPortillo\source\repos\ExamenModuloCSharp\ExamenModuloCSharp\bin\Debug\ExamenModuloCSharp.pdb
+C:\Users\JonathanPortillo\source\repos\ExamenModuloCSharp\ExamenModuloCSharp\obj\Debug\ExamenModuloCSharp.csproj.AssemblyReference.cache
+C:\Users\JonathanPortillo\source\repos\ExamenModuloCSharp\ExamenModuloCSharp\obj\Debug\ExamenModuloCSharp.csproj.SuggestedBindingRedirects.cache
+C:\Users\JonathanPortillo\source\repos\ExamenModuloCSharp\ExamenModuloCSharp\obj\Debug\ExamenModuloCSharp.Form1.resources
+C:\Users\JonathanPortillo\source\repos\ExamenModuloCSharp\ExamenModuloCSharp\obj\Debug\ExamenModuloCSharp.Properties.Resources.resources
+C:\Users\JonathanPortillo\source\repos\ExamenModuloCSharp\ExamenModuloCSharp\obj\Debug\ExamenModuloCSharp.csproj.GenerateResource.cache
+C:\Users\JonathanPortillo\source\repos\ExamenModuloCSharp\ExamenModuloCSharp\obj\Debug\ExamenModuloCSharp.csproj.CoreCompileInputs.cache
+C:\Users\JonathanPortillo\source\repos\ExamenModuloCSharp\ExamenModuloCSharp\obj\Debug\ExamenModuloCSharp.exe
+C:\Users\JonathanPortillo\source\repos\ExamenModuloCSharp\ExamenModuloCSharp\obj\Debug\ExamenModuloCSharp.pdb
