@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ExamenModuloCSharp.controller;
+using ExamenModuloCSharp.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -99,6 +101,12 @@ namespace ExamenModuloCSharp
             else
             {
                 groupDatosIniciales.Visible = false;
+                Tienda tienda = TiendaController.CrearTienda(formNomTienda.Text, formDirTienda.Text);
+                Vendedor vendedor = TiendaController.CrearVendedor(formNomVend.Text, formApeVend.Text, formCodVend.Text);
+
+                TiendaController.AsignarVendedorATienda(vendedor, tienda);
+
+
             }
             
         }

@@ -16,5 +16,15 @@ namespace ExamenModuloCSharp
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }
         public string CodigoVendedor { get => codigoVendedor; set => codigoVendedor = value; }
+
+        // Constructores
+        public Vendedor() { }
+
+        public Vendedor(string nombre, string apellido, string codigoVendedor)
+        {
+            Nombre = nombre;
+            Apellido = apellido;
+            CodigoVendedor = codigoVendedor;
+        }
     }
 }
