@@ -14,5 +14,23 @@ namespace ExamenModuloCSharp
 
         public string Manga { get => manga; set => manga = value; }
         public string Cuello { get => cuello; set => cuello = value; }
+
+        // Constructores
+        public Camisa() : base()
+        {
+
+        }
+
+        public Camisa(string cuello, string manga) : base()
+        {
+            Cuello = cuello;
+            Manga  = manga; 
+        }
+
+        public Camisa(string cuello, string manga, string calidad, int cantidadStock) : base(calidad, cantidadStock)
+        {
+            Cuello = cuello;
+            Manga = manga;
+        }
     }
 }

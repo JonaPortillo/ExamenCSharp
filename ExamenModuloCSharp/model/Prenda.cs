@@ -16,5 +16,23 @@ namespace ExamenModuloCSharp
         public string Calidad { get => calidad; set => calidad = value; }
         public int PrecioUnitario { get => precioUnitario; set => precioUnitario = value; }
         public int CantidadStock { get => cantidadStock; set => cantidadStock = value; }
+
+        // Constructores
+        public Prenda() { }
+
+        public Prenda(string calidad, int cantidadStock, int precioUnitario)
+        {
+            Calidad = calidad;
+            PrecioUnitario = precioUnitario;
+            CantidadStock = cantidadStock;
+        }
+
+        public Prenda(string calidad, int cantidadStock)
+        {
+            Calidad = calidad;
+            CantidadStock = cantidadStock;
+        }
+
+
     }
 }
