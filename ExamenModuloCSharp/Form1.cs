@@ -21,6 +21,7 @@ namespace ExamenModuloCSharp
         private string cuello = "comun";
         private string manga = "larga";
         private string tipo = "comun";
+        private double ganancias = 0;
 
         public Form1()
         {
@@ -243,16 +244,27 @@ namespace ExamenModuloCSharp
                     tbPrecioUni.Text = "";
 
                     //Actualizar historial cotizaciones
-                    label24.Text = this.tienda.Cotizaciones.First().NumeroIdentificacion.ToString() ;
-                    label25.Text = this.tienda.Cotizaciones.First().CodigoVendedor.ToString();
-                    label26.Text = this.tienda.Cotizaciones.First().Prenda.GetType().Name;
-                    label27.Text = this.tienda.Cotizaciones.First().CantidadUnidadesCotizadas.ToString();
-                    if(this.tienda.Cotizaciones.First().Prenda.GetType().Name == "Camisa")
+                    Cotizacion cot = this.tienda.Cotizaciones.Last();
+
+                    label24.Text += cot.NumeroIdentificacion.ToString() + "\n\n ---- \n";
+                    label25.Text += cot.CodigoVendedor.ToString() + "\n\n ------ \n";
+                    label27.Text += cot.CantidadUnidadesCotizadas.ToString() + "\n\n ---- \n";
+                    if (cot.Prenda.GetType().Name == "Camisa")
                     {
-                        label26.Text = this.tienda.Cotizaciones.First().Prenda.GetType().Name.ToString() + ", cuello " + this.tienda.Cotizaciones.First().Prenda.Calidad.ToString(); ;
+                        Camisa prenda = (Camisa)cot.Prenda;
+                        label26.Text += "Cam, cuello: " + prenda.Cuello + ", manga: " + prenda.Manga + "\n -------- \n";
                     }
-                    label28.Text = this.tienda.Cotizaciones.First().Prenda.Calidad.ToString();
-                    label29.Text = this.tienda.Cotizaciones.First().Resultado.ToString();
+                    else
+                    {
+                        Pantalon prenda = (Pantalon)cot.Prenda;
+                        label26.Text += "Pan, tipo: " + prenda.Tipo + "\n\n ---- \n";
+                    }
+                    label28.Text += (cot.Prenda.Calidad == "premium" ? "prem" : "stan") + "\n\n ---- \n";
+                    label29.Text += cot.Resultado.ToString() + "\n\n ---- \n";
+
+                    this.ganancias += cot.Resultado;
+
+                    lblGanTotal.Text = this.ganancias.ToString();
 
                     label17.Text = tienda.Cotizaciones.Count().ToString();
                 }
@@ -341,6 +353,26 @@ namespace ExamenModuloCSharp
         }
 
         private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label33_Click(object sender, EventArgs e)
         {
 
         }

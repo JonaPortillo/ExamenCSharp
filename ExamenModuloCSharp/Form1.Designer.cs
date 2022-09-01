@@ -88,6 +88,14 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.lblGanTotal = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
             this.tabCotizar.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -130,7 +138,7 @@
             // 
             // lblCodVend
             // 
-            this.lblCodVend.AutoSize = true;
+            this.lblCodVend.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCodVend.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodVend.ForeColor = System.Drawing.Color.Navy;
             this.lblCodVend.Location = new System.Drawing.Point(265, 62);
@@ -139,7 +147,7 @@
             this.lblCodVend.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.lblCodVend.Size = new System.Drawing.Size(139, 24);
             this.lblCodVend.TabIndex = 13;
-            this.lblCodVend.Text = "Codigo Vendedor";
+            this.lblCodVend.Text = "1231312";
             this.lblCodVend.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblCodVend.Click += new System.EventHandler(this.lblCodVend_Click);
             // 
@@ -444,7 +452,6 @@
             // 
             // lblDirTienda
             // 
-            this.lblDirTienda.AutoSize = true;
             this.lblDirTienda.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDirTienda.ForeColor = System.Drawing.Color.Navy;
             this.lblDirTienda.Location = new System.Drawing.Point(265, 34);
@@ -485,6 +492,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.lblGanTotal);
+            this.tabPage2.Controls.Add(this.label30);
             this.tabPage2.Controls.Add(this.label29);
             this.tabPage2.Controls.Add(this.label28);
             this.tabPage2.Controls.Add(this.label27);
@@ -520,7 +529,7 @@
             this.groupDatosIniciales.Controls.Add(this.label7);
             this.groupDatosIniciales.Controls.Add(this.label3);
             this.groupDatosIniciales.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupDatosIniciales.Location = new System.Drawing.Point(436, 12);
+            this.groupDatosIniciales.Location = new System.Drawing.Point(0, 0);
             this.groupDatosIniciales.Name = "groupDatosIniciales";
             this.groupDatosIniciales.Size = new System.Drawing.Size(411, 361);
             this.groupDatosIniciales.TabIndex = 9;
@@ -675,7 +684,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(92, 377);
+            this.label17.Location = new System.Drawing.Point(149, 377);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(41, 13);
             this.label17.TabIndex = 15;
@@ -776,61 +785,145 @@
             // 
             this.label24.Location = new System.Drawing.Point(3, 31);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(41, 14);
+            this.label24.Size = new System.Drawing.Size(41, 267);
             this.label24.TabIndex = 6;
-            this.label24.Text = "label24";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label25
             // 
             this.label25.Location = new System.Drawing.Point(44, 31);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(85, 14);
+            this.label25.Size = new System.Drawing.Size(85, 267);
             this.label25.TabIndex = 7;
-            this.label25.Text = "label25";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label25.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // label26
             // 
-            this.label26.Location = new System.Drawing.Point(129, 31);
+            this.label26.Location = new System.Drawing.Point(119, 31);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(121, 14);
+            this.label26.Size = new System.Drawing.Size(143, 267);
             this.label26.TabIndex = 8;
-            this.label26.Text = "label26";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label26.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label27
             // 
             this.label27.Location = new System.Drawing.Point(250, 31);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(58, 14);
+            this.label27.Size = new System.Drawing.Size(58, 267);
             this.label27.TabIndex = 9;
-            this.label27.Text = "label27";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label27.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label28
             // 
             this.label28.Location = new System.Drawing.Point(308, 31);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(49, 14);
+            this.label28.Size = new System.Drawing.Size(49, 267);
             this.label28.TabIndex = 10;
-            this.label28.Text = "label28";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label28.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label29
             // 
             this.label29.Location = new System.Drawing.Point(357, 30);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(50, 14);
+            this.label29.Size = new System.Drawing.Size(50, 268);
             this.label29.TabIndex = 11;
-            this.label29.Text = "label29";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label29.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label30
+            // 
+            this.label30.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label30.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(132, 298);
+            this.label30.Margin = new System.Windows.Forms.Padding(0);
+            this.label30.Name = "label30";
+            this.label30.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.label30.Size = new System.Drawing.Size(275, 37);
+            this.label30.TabIndex = 12;
+            this.label30.Text = "Ganancia Total: $";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblGanTotal
+            // 
+            this.lblGanTotal.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblGanTotal.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGanTotal.Location = new System.Drawing.Point(272, 300);
+            this.lblGanTotal.Margin = new System.Windows.Forms.Padding(0);
+            this.lblGanTotal.Name = "lblGanTotal";
+            this.lblGanTotal.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.lblGanTotal.Size = new System.Drawing.Size(132, 32);
+            this.lblGanTotal.TabIndex = 13;
+            this.lblGanTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(12, 377);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(129, 13);
+            this.label31.TabIndex = 16;
+            this.label31.Text = "Cantidad de cotizaciones:";
+            this.label31.Click += new System.EventHandler(this.label31_Click);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(18, 399);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(40, 13);
+            this.label32.TabIndex = 17;
+            this.label32.Text = "prenda";
+            this.label32.Click += new System.EventHandler(this.label32_Click);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(92, 399);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(42, 13);
+            this.label33.TabIndex = 18;
+            this.label33.Text = "Calidad";
+            this.label33.Click += new System.EventHandler(this.label33_Click);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(175, 399);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(36, 13);
+            this.label34.TabIndex = 19;
+            this.label34.Text = "Cuello";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(249, 399);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(40, 13);
+            this.label35.TabIndex = 20;
+            this.label35.Text = "Manga";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(329, 399);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(79, 13);
+            this.label36.TabIndex = 21;
+            this.label36.Text = "Tipo (Pantalon)";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(828, 546);
+            this.ClientSize = new System.Drawing.Size(409, 361);
+            this.Controls.Add(this.label36);
+            this.Controls.Add(this.label35);
+            this.Controls.Add(this.label34);
+            this.Controls.Add(this.label33);
+            this.Controls.Add(this.label32);
+            this.Controls.Add(this.label31);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -928,6 +1021,14 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lblGanTotal;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
     }
 }
 
