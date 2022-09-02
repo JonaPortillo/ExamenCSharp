@@ -24,7 +24,9 @@ namespace ExamenModuloCSharp
         public double Resultado { get => resultado; set => resultado = value; }
         internal Prenda Prenda { get => prenda; set => prenda = value; }
 
-        //Controladores
+        // Constructores
+        public Cotizacion() { }
+
         public Cotizacion(string codVen, int cantidad,double total, Prenda prenda)
         {
             NumeroIdentificacion = identificacion;

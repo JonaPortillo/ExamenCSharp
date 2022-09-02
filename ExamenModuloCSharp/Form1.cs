@@ -15,6 +15,7 @@ namespace ExamenModuloCSharp
 {
     public partial class Form1 : Form
     {
+        // Atributos de referencia para utilizar en la vista
         private Tienda tienda;
         private string prenda = "Camisa";
         private string calidad = "standar";
@@ -50,6 +51,8 @@ namespace ExamenModuloCSharp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            // Carga inicial de los balores por default al cargar el formulario
             cbChupin.Enabled = rbPantalon.Checked;
             cbCuelloMao.Enabled = rbCamisa.Checked;
             cbMangaCorta.Enabled = rbCamisa.Checked;
@@ -98,6 +101,7 @@ namespace ExamenModuloCSharp
 
         private void btnComenzar_Click(object sender, EventArgs e)
         {
+            // Valida que los campos obligatorios contengan información
             if(formApeVend.Text == "" ||
                 formNomVend.Text == "" ||
                 formCodVend.Text == "" ||
@@ -107,6 +111,7 @@ namespace ExamenModuloCSharp
             }
             else
             {
+                // Cierra la ventada de Ingreso de datos y comienza con la creazión de la tienda
                 groupDatosIniciales.Visible = false;
                 Tienda tienda = TiendaController.CrearTienda(formNomTienda.Text, formDirTienda.Text);
                 Vendedor vendedor = TiendaController.CrearVendedor(formNomVend.Text, formApeVend.Text, formCodVend.Text);
@@ -124,6 +129,7 @@ namespace ExamenModuloCSharp
 
                 this.tienda = tienda;
 
+                // Muestra en el label de stock disponible, el valos por default
                 string[] carac = prenda == "Pantalon" ? new string[] { tipo } : new string[] { cuello, manga };
                 lblStockDisponible.Text = TiendaController.ActualizarStockVista(tienda, prenda, calidad, carac).ToString();
             }
@@ -169,6 +175,7 @@ namespace ExamenModuloCSharp
 
         private void btnCotizar_MouseEnter(object sender, EventArgs e)
         {
+            // Señalar al usuario que hay campos obligatorios imcompletos
             if(tbCantidad.Text == "" || tbPrecioUni.Text == "")
             {
                 tbCantidad.BackColor = Color.Red;
@@ -187,13 +194,14 @@ namespace ExamenModuloCSharp
 
         private void tbPrecioUni_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Solo se permiten numeros
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
                 (e.KeyChar != ','))
             {
                 e.Handled = true;
             }
 
-            // only allow one decimal point
+            // Solo se permite una coma en el decimal (Para evitar errores)
             if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
             {
                 e.Handled = true;
@@ -202,13 +210,14 @@ namespace ExamenModuloCSharp
 
         private void tbCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Solo se permiten numeros (Para evitar errores)
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
                 (e.KeyChar != ','))
             {
                 e.Handled = true;
             }
 
-            // only allow one decimal point
+            // Solo se permite una coma en el decimal (Para evitar errores)
             if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') == -1))
             {
                 e.Handled = true;
@@ -217,7 +226,7 @@ namespace ExamenModuloCSharp
 
         private void btnCotizar_Click(object sender, EventArgs e)
         {
-            //lblStockDisponible.Text = this.tienda.Prendas[1].CantidadStock.ToString();
+            // Labels auxiliares (No los vé el usuario)
             label12.Text = this.prenda;
             label13.Text = this.calidad;
             label14.Text = this.cuello;
@@ -262,6 +271,7 @@ namespace ExamenModuloCSharp
                     label28.Text += (cot.Prenda.Calidad == "premium" ? "prem" : "stan") + "\n\n ---- \n";
                     label29.Text += cot.Resultado.ToString() + "\n\n ---- \n";
 
+                    // Cambios en la vista, mostrando el valor de la cotización
                     this.ganancias += cot.Resultado;
 
                     lblGanTotal.Text = this.ganancias.ToString();
@@ -270,6 +280,7 @@ namespace ExamenModuloCSharp
                 }
                 else
                 {
+                    // Se ejecutará en caso de que se soliciten más prendas de las disponibles
                     MessageBox.Show("No hay stock de esa prenda suficiente en esta tienda", "Stock insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 
@@ -284,29 +295,40 @@ namespace ExamenModuloCSharp
 
         private void cbMangaCorta_CheckedChanged(object sender, EventArgs e)
         {
+            // ¿Es Manga corta?
             this.manga = this.manga == "corta" ? "larga":"corta";
 
+            // Actualizar en la vista el stock disponible
             string[] carac = new string[] { cuello, manga };
             lblStockDisponible.Text = TiendaController.ActualizarStockVista(tienda, prenda, calidad, carac).ToString();
         }
 
         private void cbCuelloMao_CheckedChanged(object sender, EventArgs e)
         {
+            // ¿Es Cuello mao?
             this.cuello = this.cuello == "comun" ? "mao" : "comun";
+
+            // Actualizar en la vista el stock disponible
             string[] carac = new string[] { cuello, manga };
             lblStockDisponible.Text = TiendaController.ActualizarStockVista(tienda, prenda, calidad, carac).ToString();
         }
 
         private void cbChupin_CheckedChanged(object sender, EventArgs e)
         {
+            // ¿Es pantalón Chupin?
             this.tipo = this.tipo == "comun" ? "chupin" : "comun";
+
+            // Actualizar en la vista el stock disponible
             string[] carac = new string[] { tipo };
             lblStockDisponible.Text = TiendaController.ActualizarStockVista(tienda, prenda, calidad, carac).ToString();
         }
 
         private void rbStandar_CheckedChanged(object sender, EventArgs e)
         {
+            // ¿Es premium o standar?
             this.calidad = this.calidad == "standar" ? "premium" : "standar";
+
+            // Actualizar en la vista el stock disponible
             string[] carac = prenda == "Pantalon" ? new string[] { tipo } : new string[] { cuello,manga };
             lblStockDisponible.Text = TiendaController.ActualizarStockVista(tienda, prenda, calidad, carac).ToString();
 

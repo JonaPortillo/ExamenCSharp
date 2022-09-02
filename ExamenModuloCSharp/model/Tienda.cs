@@ -9,6 +9,7 @@ namespace ExamenModuloCSharp.model
 {
     internal class Tienda
     {
+        // Atributos
         private string nombre;
         private string direccion;
         private List<Prenda> prendas;
@@ -21,11 +22,7 @@ namespace ExamenModuloCSharp.model
         public Vendedor Vendedor { get => vendedor; set => vendedor = value; }
         internal List<Cotizacion> Cotizaciones { get => cotizaciones; set => cotizaciones = value; }
 
-        public void agregarPrenda(Prenda prenda)
-        {
-            this.prendas.Add((Prenda)prenda);
-        }
-
+        // Constructores
         public Tienda() { }
 
         public Tienda(string nombre)
@@ -41,6 +38,8 @@ namespace ExamenModuloCSharp.model
             Direccion = direccion;
             Prendas = new List<Prenda>();
         }
+
+        // Métodos
 
         public int StockDisponible(string prenda, string calidad, string[] caracteristicas)
         {
@@ -82,6 +81,11 @@ namespace ExamenModuloCSharp.model
         public double Cotizar(string prenda, string calidad, string[] caracteristicas, double precio, int cantidad)
         {
             return this.Vendedor.Cotizar(ref cotizaciones , Prendas, prenda, calidad, caracteristicas, precio, cantidad); 
+        }
+
+        public void agregarPrenda(Prenda prenda)
+        {
+            this.prendas.Add((Prenda)prenda);
         }
     }
 }

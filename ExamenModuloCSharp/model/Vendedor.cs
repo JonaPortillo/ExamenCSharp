@@ -26,6 +26,8 @@ namespace ExamenModuloCSharp
             Apellido = apellido;
             CodigoVendedor = codigoVendedor;
         }
+        
+        // Métodos
 
         public double Cotizar(ref List<Cotizacion> cotizaciones, List<Prenda> prendas, string prenda, string calidad, string[] caracteristicas, double precio, int cantidad)
         {

@@ -541,7 +541,7 @@
             this.formDirTienda.Location = new System.Drawing.Point(203, 87);
             this.formDirTienda.Name = "formDirTienda";
             this.formDirTienda.Size = new System.Drawing.Size(176, 27);
-            this.formDirTienda.TabIndex = 10;
+            this.formDirTienda.TabIndex = 5;
             // 
             // label11
             // 
